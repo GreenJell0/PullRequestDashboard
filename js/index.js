@@ -109,7 +109,7 @@ $(function() {
                         } else {
                             var repoFilter = new RegExp(repoFilter);
                             $.each(repos, function(i, repo) {
-                                if (repo.name.match(repoFilter) == null) {
+                                if (repo.name.match(repoFilter) !== null) {
                                    filteredRepos.push(repo);
                                 }
                             });
